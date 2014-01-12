@@ -20,6 +20,7 @@
 			</div>  <!-- END .copy -->
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #footer -->
+</div>  <!-- END .mainwrapper -->
 
 	<?php wp_footer(); ?>
 	<!-- 	Include Scripts  -->

@@ -6,7 +6,7 @@
 
 <!-- Begin Template: inc/layout.col-two.php  -->
 
-	<div class="left">
+	<div class="section left half">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(__('')); endwhile; else: endif; ?>
 	</div>  <!-- END .right -->
 

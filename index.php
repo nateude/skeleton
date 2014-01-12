@@ -6,17 +6,9 @@
  */
 ?>
 
-<!-- Begin Template: index.php  -->
-
 <?php include ("inc/head.php") ?>
 
-<div class="mainwrapper">
-
-	<div class="menu top">
-		<div class="wrapper">
-			<?php wp_nav_menu( array( 'theme_location' => "Top" ) ); ?>
-		</div>  <!-- END .wrapper -->
-	</div>  <!-- END .menu top -->
+<!-- Begin Template: index.php  -->
 
 	<?php include ("inc/body.header.php") ?>
 
@@ -31,11 +23,11 @@
 	<div id="content">
 		<div class="wrapper">
 			<?php if(!is_page('blog')) { ?>
-			<div class="section full text">
+			<div class="section full text border">
 				<?php include ("inc/layout.col-two.php") ?>
 			</div>  <!-- END .section -->
 			<?php } ?>
-			<div class="section full posts grid">
+			<div class="section full posts grid border">
 				<?php include ("inc/layout.posts.php") ?>
 			</div>  <!-- END .section -->
 			<div class="section full widgets grid">
@@ -45,5 +37,5 @@
 	</div>  <!-- END #content -->
 
 	<?php include("inc/body.footer.php") ?>
-</div>  <!-- END .mainwrapper -->
+
 <!-- End Template: index.php  -->

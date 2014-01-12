@@ -4,7 +4,17 @@
  */
 ?>
 
+<?php include ("inc/head.php") ?>
+
 <!-- Begin Template: inc/body.header.php  -->
+
+<div class="mainwrapper">
+
+<div class="menu top">
+	<div class="wrapper">
+		<?php wp_nav_menu( array( 'theme_location' => "Top" ) ); ?>
+	</div>  <!-- END .wrapper -->
+</div>  <!-- END .menu top -->
 
 <div id="header">
 	<div class="wrapper">

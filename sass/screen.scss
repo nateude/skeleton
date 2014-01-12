@@ -133,7 +133,6 @@ ul {
 #header{
 	float:left;
 	width:100%;
-	border-bottom: 5px solid $graymd;
 
 	.logo {
 		width: 10%;
@@ -213,19 +212,17 @@ ul {
 		float: left;
 		width: 100%;
 		margin: 20px 0;
-		border-bottom: 1px solid $graymd;
 		padding: 0 0 20px;
 
-		.left{
-			float: left;
-			width: 49%;
-			margin: 0 1% 0 0;
-		}
-		.right{
-			float: left;
-			width: 49%;
-			margin: 0 0 0 1%;
-		}
+		&.left{margin: 0 2% 0 0;}
+		&.right{margin: 0 0 0 2%;}
+		&.half{width: 48%;}
+		&.onethird{width: 31%;}
+		&.twothird{width: 64%;}
+		&.onequater{width:23%}
+		&.threequater{width:73%}
+
+		&.border{border-bottom: 1px solid $graymd;}
 	}
 }
 
@@ -257,9 +254,39 @@ ul {
 			}
 		}
 	}
+	&.list{
+		.widget{
+			float: left;
+			width: 100%;
+			margin: 0 0 20px;
+			padding: 0 0 20px;
+			border-bottom:1px solid $graymd;
+
+			&:last-child{border-bottom:none;}
+		}
+	}
 }
 
 #footer{
 	float:left;
 	width:100%;
+	background: $graydk;
+	color:$graymd;
+
+	a{color:$graymd;}
+	a:hover{color:$white;}
+
+	.menu.footer{
+		margin: 20px 0 20px;
+		border-bottom:1px solid $gray;
+		padding: 0 0 10px;
+		a{
+			color:$white;
+			padding:5px 10px 5px 0;
+
+			&:hover{
+				color:$graymd;
+			}
+		}
+	}
 }
