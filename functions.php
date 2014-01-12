@@ -37,21 +37,21 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Page Sidebar',
+	register_sidebar(array('name'=>'Page',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
 		'after_widget' => '</div>', // Removes </li>
 		'before_title' => '<h3>', // Replaces <h2>
 		'after_title' => '</h3>', // Replaces </h2>
 ));
 if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Post Sidebar',
+	register_sidebar(array('name'=>'Post',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
 		'after_widget' => '</div>', // Removes </li>
 		'before_title' => '<h3>', // Replaces <h2>
 		'after_title' => '</h3>', // Replaces </h2>
 ));
 if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Footer Widget',
+	register_sidebar(array('name'=>'Footer',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
 		'after_widget' => '</div>', // Removes </li>
 		'before_title' => '<h3>', // Replaces <h2>

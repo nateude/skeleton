@@ -6,7 +6,7 @@
 
 <!-- Begin Template: inc/layout.posts.php  -->
 
-<div class="section full posts">
+<div class="section full posts list">
 
 	<div class="wrapper">
 		<?php
@@ -34,6 +34,6 @@
 		<?php $i++; endwhile; endif; ?>
 	</div>  <!-- END .wrapper -->
 
-</div>  <!-- END .section full .posts -->
+</div>  <!-- END .section full posts list -->
 
 <!-- End Template: inc/layout.posts.php  -->

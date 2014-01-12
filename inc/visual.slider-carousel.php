@@ -1,12 +1,12 @@
 <?php
 /**
- * Visual element: Slider
+ * Visual element: Slider with pager carousel
  */
 ?>
 
-<!-- Begin Template: inc/visual.slider.php  -->
+<!-- Begin Template: inc/visual.slider-carousel.php  -->
 
-<div id="mainvisual" class="slider">
+<div id="mainvisual" class="slider carousel">
 	<div class="controls">
     	<div class="arrows cycle-prev"></div>  <!-- END .cycle cycle-prev -->
     	<div class="arrows cycle-next"></div>  <!-- END .cycle cycle-next -->
@@ -45,6 +45,6 @@
 	<?php endif; ?>
 	</div> <!-- END .slideshow -->
 
-</div>  <!-- END #mainvisual .slider -->
+</div>  <!-- END #mainvisual .slider carousel -->
 
-<!-- End Template: inc/visual.slider.php  -->
+<!-- End Template: inc/visual.slider-carousel.php  -->

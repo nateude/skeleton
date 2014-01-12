@@ -33,7 +33,7 @@ layout.posts.php
 	in page content section (add new widget code to functions)
 
 *visual.slider.php
-	basic cycle 2 responsive slider, option to show text
+	basic cycle 2 responsive slider, option to show text. Banner defualts to "banner" category and max of 5 posts.
 *visual.slider-carousel.php
 	cycle 2 responsive slider with caruousel image pager
 *visual.slider-static.php
@@ -68,5 +68,3 @@ pre set img/ for image libraries
 
 ================================================================
 *items not completed or not yet created
-
----testing commits
