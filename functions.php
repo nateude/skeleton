@@ -28,14 +28,28 @@ add_action('wp_enqueue_scripts', 'siteScriptLoad');
 function register_my_menus() {
   register_nav_menus(
     array(
-      'top-menu' => __( 'Top Menu' ),
-      'main-menu' => __( 'Main Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
+      'top-menu' => __( 'Top' ),
+      'main-menu' => __( 'Main' ),
+      'footer-menu' => __( 'Footer' )
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 
+if ( function_exists('register_sidebar') )
+	register_sidebar(array('name'=>'Home Widgets',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
+		'after_widget' => '</div>', // Removes </li>
+		'before_title' => '<h3>', // Replaces <h2>
+		'after_title' => '</h3>', // Replaces </h2>
+));
+if ( function_exists('register_sidebar') )
+	register_sidebar(array('name'=>'Page Widgets',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
+		'after_widget' => '</div>', // Removes </li>
+		'before_title' => '<h3>', // Replaces <h2>
+		'after_title' => '</h3>', // Replaces </h2>
+));
 if ( function_exists('register_sidebar') )
 	register_sidebar(array('name'=>'Page',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
