@@ -149,6 +149,39 @@ ul {
 	}
 	.social {
 		float: right;
+		clear: right;
+		margin: 10px 0 0;
+	}
+}
+.social {
+	a{
+		float: left;
+		display: block;
+		background: url("../img/social_icons.png") no-repeat 0 0 transparent;
+		width: 40px;
+		height: 40px;
+		margin: 5px 5px 5px 0;
+
+		&:last-child{margin: 5px 0; }
+
+		&.facebook{background-position: 0px 0px;}
+		&.facebook:hover{background-position: 0px -50px;}
+		&.twitter{background-position: -50px 0px;}
+		&.twitter:hover{background-position: -50px -50px;}
+		&.pintrest{background-position: -100px 0px;}
+		&.pintrest:hover{background-position: -100px -50px;}
+		&.google{background-position: -150px 0px;}
+		&.google:hover{background-position: -150px -50px;}
+		&.myspace{background-position: -200px 0px;}
+		&.myspace:hover{background-position: -200px -50px;}
+		&.linkedin{background-position: -250px 0px;}
+		&.linkedin:hover{background-position: -250px -50px;}
+		&.instagram{background-position: -300px 0px;}
+		&.instagram:hover{background-position: -300px -50px;}
+		&.rss{background-position: -350px 0px;}
+		&.rss:hover{background-position: -350px -50px;}
+		&.youtube{background-position: -400px 0px;}
+		&.youtube:hover{background-position: -400px -50px;}
 	}
 }
 #mainvisual {
