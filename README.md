@@ -16,69 +16,64 @@ Template Section Options
 -----------------------------------------------------------
 the following are pre created tempalte sections that can be use on any template page, all files are located in inc/.
 
-head.php
+*	*head.php*
 	base html head section with css setup, and basic PHP user agent tester
-*body.header.php
+*	*body.header.php*  
 	Basic header layout section for logo, contact info etc
-*body.footer.php
+*	*body.footer.php*  
 	basic footer element with menu, widget section and info with copyright
 
-layout.col-one.php
+*	*layout.col-one.php  *  
 	one coloumn full width content section
-layout.col-two.php
+*	*layout.col-two.php  *  
 	two coloumn full width content section use [col-2] shortcode to break in content
-layout.posts.php
+*	*layout.posts.php*  
 	full width post section # of posts based on default WP setting. use "categories" custom field to add or remove  categories from posts section, comma seperated list use negative to hid, postive to restrict. E.G. "-3" would remove category 3 from posts while "3" would show only category 3
-*layout.sidebar.php
+*	*layout.sidebar.php*  
 	sidebar with widgets
-*layout.widget.php
+*	*layout.widget.php*  
 	in page content section (add new widget code to functions)
 
-*visual.slider.php
+*	*visual.slider.php*  
 	basic cycle 2 responsive slider, option to show text. Banner defualts to "banner" category and max of 5 posts.
-*visual.slider-carousel.php
+*	*visual.slider-carousel.php*  
 	cycle 2 responsive slider with caruousel image pager
-*visual.slider-static.php
+*	*visual.slider-static.php*  
 	static image banner, option to show text
 
 
 Template Scripts
 -----------------------------------------------------------
-*Responsive Banner image resize
-*Animated hover menu (with CSS hover back up)
-*Mobile/Tablet tap menu
+*	Responsive Banner image resize
+*	Animated hover menu (with CSS hover back up)
+*	Mobile/Tablet tap menu
 
-Download from http://jquery.malsup.com/cycle2/
-	libs/jquery.cycle2.min.js
+*	Download from http://jquery.malsup.com/cycle2/  
+	libs/jquery.cycle2.min.js  
 	libs/jquery.cycle2.carousel.min.js
 
 CSS Files
 -----------------------------------------------------------
 basic compass command script pre installed w compas & sass installed run "compass watch" for css out put visit compass-style.org for more infomation or to update. Comapss reset pre set in screen.scss
 
-screen.scss
-large.scss
-medium.scss
-small.scss
-ie.scss
-_vars.scss
+*		screen.scss
+*		large.scss
+*		medium.scss
+*		small.scss
+*		ie.scss
+*		_vars.scss
 
 Images
 -----------------------------------------------------------
 pre set img/ for image libraries
 
 
------------------------------------------------------------
-*items not completed or not yet created
-
-
+TODO
 ================================================================
-::TODO::
-================================================================
- slider with carousel pager
- carousel gallery element
- comment forms and layout elements
- admin theme options
- hover menu with touch support
- jQuery Mobile support
+*	slider with carousel pager
+*	carousel gallery element
+*	comment forms and layout elements
+*	admin theme options
+*	hover menu with touch support
+*	jQuery Mobile support
 
