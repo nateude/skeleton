@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php include ("inc/head.php") ?>
+<?php include ("head.php") ?>
 
 <!-- Begin Template: inc/body.header.php  -->
 
