@@ -32,9 +32,8 @@ Template Scripts
 *	Responsive Banner image resize
 *	Animated hover menu (with CSS hover back up)
 *	Mobile/Tablet tap menu
-
-*	Download from http://jquery.malsup.com/cycle2/
-	libs/jquery.cycle2.min.js
+*	Downloads from http://jquery.malsup.com/cycle2/  
+	libs/jquery.cycle2.min.js  
 	libs/jquery.cycle2.carousel.min.js
 
 CSS Files
