@@ -1,5 +1,7 @@
-skeleton
+skeleton 
 ================================================================
+
+preview: http://dev.nateude.com/skeleton/
 
 skeleton is a basic starter theme has only the basic theme templates with very few html elements. Includes a simple resposnisce tempalte set up with the base html elements(headers, p, ul, a, etc) with _vars.scss and compass reset pre set.
 
@@ -66,5 +68,17 @@ Images
 pre set img/ for image libraries
 
 
-================================================================
+-----------------------------------------------------------
 *items not completed or not yet created
+
+
+================================================================
+::TODO::
+================================================================
+ slider with carousel pager
+ carousel gallery element
+ comment forms and layout elements
+ admin theme options
+ hover menu with touch support
+ jQuery Mobile support
+
