@@ -22,18 +22,12 @@ the following are pre created tempalte sections that can be use on any template 
 	Basic header layout section for logo, contact info etc
 *	*body.footer.php*  
 	basic footer element with menu, widget section and info with copyright
-
-*	*layout.col-one.php  *  
-	one coloumn full width content section
-*	*layout.col-two.php  *  
-	two coloumn full width content section use [col-2] shortcode to break in content
 *	*layout.posts.php*  
-	full width post section # of posts based on default WP setting. use "categories" custom field to add or remove  categories from posts section, comma seperated list use negative to hid, postive to restrict. E.G. "-3" would remove category 3 from posts while "3" would show only category 3
+	simple post section for lists or grid # of posts based on default WP setting. use "categories" custom field to add or remove  categories from posts section.
 *	*layout.sidebar.php*  
 	sidebar with widgets
 *	*layout.widget.php*  
 	in page content section (add new widget code to functions)
-
 *	*visual.slider.php*  
 	basic cycle 2 responsive slider, option to show text. Banner defualts to "banner" category and max of 5 posts.
 *	*visual.slider-carousel.php*  
