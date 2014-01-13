@@ -1,4 +1,4 @@
-skeleton 
+skeleton
 ================================================================
 
 preview: http://dev.nateude.com/skeleton/
@@ -16,24 +16,15 @@ Template Section Options
 -----------------------------------------------------------
 the following are pre created tempalte sections that can be use on any template page, all files are located in inc/.
 
-*	*head.php*
-	base html head section with css setup, and basic PHP user agent tester
-*	*body.header.php*  
-	Basic header layout section for logo, contact info etc
-*	*body.footer.php*  
-	basic footer element with menu, widget section and info with copyright
-*	*layout.posts.php*  
-	simple post section for lists or grid # of posts based on default WP setting. use "categories" custom field to add or remove  categories from posts section.
-*	*layout.sidebar.php*  
-	sidebar with widgets
-*	*layout.widget.php*  
-	in page content section (add new widget code to functions)
-*	*visual.slider.php*  
-	basic cycle 2 responsive slider, option to show text. Banner defualts to "banner" category and max of 5 posts.
-*	*visual.slider-carousel.php*  
-	cycle 2 responsive slider with caruousel image pager
-*	*visual.slider-static.php*  
-	static image banner, option to show text
+*	*head.php* : base html head section with css setup, and basic PHP user agent tester
+*	*body.header.php* : Basic header layout section for logo, contact info etc
+*	*body.footer.php* : basic footer element with menu, widget section and info with copyright
+*	*layout.posts.php* : simple post section for lists or grid # of posts based on default WP setting. use "categories" custom field to add or remove  categories from posts section.
+*	*layout.sidebar.php* : sidebar with widgets
+*	*layout.widget.php* : in page content section (add new widget code to functions)
+*	*visual.slider.php* : basic cycle 2 responsive slider, option to show text. Banner defualts to "banner" category and max of 5 posts.
+*	*visual.slider-carousel.php* : cycle 2 responsive slider with caruousel image pager
+*	*visual.slider-static.php* : static image banner, option to show text
 
 
 Template Scripts
@@ -42,8 +33,8 @@ Template Scripts
 *	Animated hover menu (with CSS hover back up)
 *	Mobile/Tablet tap menu
 
-*	Download from http://jquery.malsup.com/cycle2/  
-	libs/jquery.cycle2.min.js  
+*	Download from http://jquery.malsup.com/cycle2/
+	libs/jquery.cycle2.min.js
 	libs/jquery.cycle2.carousel.min.js
 
 CSS Files
@@ -70,4 +61,4 @@ TODO
 *	admin theme options
 *	hover menu with touch support
 *	jQuery Mobile support
-
+*	add JS image resizer
