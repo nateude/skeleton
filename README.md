@@ -1,5 +1,6 @@
 skeleton
 ================================================================
+*a WordPress starter theme*
 
 preview: http://dev.nateude.com/skeleton/
 
