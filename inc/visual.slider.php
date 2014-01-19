@@ -33,10 +33,9 @@
 				<div class="image"><a href="<?=$permalink ?>" ><?php  the_post_thumbnail( $deviceType ); ?></a></div>
 				<div class="content" >
 					<div class="wrapper">
-						<h3><a href="<?php $permalink ?>" ><?php the_title(); ?></a></h3>
-						<div class="mobileHide">
-							<?php the_excerpt(); ?>
-							<a class="readmore" href="<?=$permalink ?>">..read more</a>
+						<h3 class="title"><a href="<?php $permalink ?>" ><?php the_title(); ?></a></h3>
+						<div class="text">
+							<p><?php echo get_the_excerpt(); ?> <a class="readmore" href="<?php the_permalink() ?>">..read more &rsaquo; </a></p>
 						</div>
 					</div> <!-- END .wrapper -->
 				</div> <!-- END .content -->

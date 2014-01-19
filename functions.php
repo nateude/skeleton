@@ -28,30 +28,51 @@ add_action('wp_enqueue_scripts', 'siteScriptLoad');
 function register_my_menus() {
   register_nav_menus(
     array(
-      'top-menu' => __( 'Top Menu' ),
-      'main-menu' => __( 'Main Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
+      'top-menu' => __( 'Top' ),
+      'main-menu' => __( 'Main' ),
+      'footer-menu' => __( 'Footer' )
     )
   );
 }
 add_action( 'init', 'register_my_menus' );
 
 if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Page',
+	register_sidebar(array('name'=>'Home Widgets',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
 		'after_widget' => '</div>', // Removes </li>
 		'before_title' => '<h3>', // Replaces <h2>
 		'after_title' => '</h3>', // Replaces </h2>
 ));
 if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Post',
+	register_sidebar(array('name'=>'Page Widgets',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
 		'after_widget' => '</div>', // Removes </li>
 		'before_title' => '<h3>', // Replaces <h2>
 		'after_title' => '</h3>', // Replaces </h2>
 ));
 if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Footer',
+	register_sidebar(array('name'=>'Page Sidebar',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
+		'after_widget' => '</div>', // Removes </li>
+		'before_title' => '<h3>', // Replaces <h2>
+		'after_title' => '</h3>', // Replaces </h2>
+));
+if ( function_exists('register_sidebar') )
+	register_sidebar(array('name'=>'Post Sidebar',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
+		'after_widget' => '</div>', // Removes </li>
+		'before_title' => '<h3>', // Replaces <h2>
+		'after_title' => '</h3>', // Replaces </h2>
+));
+if ( function_exists('register_sidebar') )
+	register_sidebar(array('name'=>'Post Widgets',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
+		'after_widget' => '</div>', // Removes </li>
+		'before_title' => '<h3>', // Replaces <h2>
+		'after_title' => '</h3>', // Replaces </h2>
+));
+if ( function_exists('register_sidebar') )
+	register_sidebar(array('name'=>'Footer Sidebar',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
 		'after_widget' => '</div>', // Removes </li>
 		'before_title' => '<h3>', // Replaces <h2>
@@ -59,6 +80,6 @@ if ( function_exists('register_sidebar') )
 ));
 
 //set special content tags
-function coltwo( $content ){return str_replace('[col-2]','</div><div class="right">', $content );}	add_filter( "the_content", "coltwo", 2);
+function coltwo( $content ){return str_replace('[col-2]','</div><div class="section right half">', $content );}	add_filter( "the_content", "coltwo", 2);
 
 ?>
