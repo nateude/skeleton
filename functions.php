@@ -80,6 +80,8 @@ if ( function_exists('register_sidebar') )
 ));
 
 //set special content tags
-function coltwo( $content ){return str_replace('[col-2]','</div><div class="section right half">', $content );}	add_filter( "the_content", "coltwo", 2);
+function col1( $content ){return str_replace('[begin]','<div class="col left">', $content );}	add_filter( "the_content", "col1", 2);
+function coltwo( $content ){return str_replace('[break]','</div><div class="col right">', $content );}	add_filter( "the_content", "coltwo", 2);
+function colend( $content ){return str_replace('[end]','</div><div class="clear"></div>', $content );}	add_filter( "the_content", "colend", 2);
 
 ?>

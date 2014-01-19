@@ -22,7 +22,7 @@
 		<div class="wrapper">
 			<div class="section twothird left">
 				<div class="section full text">
-					<?php include ("inc/layout.col-one.php") ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(__('')); endwhile; else: endif; ?>
 				</div>  <!-- END .section -->
 				<div class="section full widgets grid">
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Page Widgets') ) {} ?>
