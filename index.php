@@ -6,18 +6,14 @@
  */
 ?>
 
-<?php include ("inc/head.php") ?>
+<?php include ("header.php") ?>
 
 <!-- Begin Template: index.php  -->
 
-	<?php include ("inc/body.header.php") ?>
+	<?php include("visual.slider.php") ?>
 
-	<?php include("inc/visual.slider.php") ?>
-
-	<div class="menu main">
-		<div class="wrapper">
-			<?php wp_nav_menu( array( 'theme_location' => "Main" ) ); ?>
-		</div>  <!-- END .wrapper -->
+	<div class="menu main large medium">
+		<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
 	</div>  <!-- END .menu main -->
 
 	<div id="content">
@@ -71,6 +67,6 @@
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #content -->
 
-	<?php include("inc/body.footer.php") ?>
-
 <!-- End Template: index.php  -->
+
+<?php include ("footer.php") ?>

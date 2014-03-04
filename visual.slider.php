@@ -6,7 +6,7 @@
 
 <!-- Begin Template: inc/visual.slider.php  -->
 
-<div id="mainvisual" class="slider">
+<div id="mainvisual" class="slider large medium">
 	<div class="controls">
     	<div class="arrows cycle-prev"></div>  <!-- END .cycle cycle-prev -->
     	<div class="arrows cycle-next"></div>  <!-- END .cycle cycle-next -->

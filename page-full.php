@@ -6,14 +6,12 @@
  */
 ?>
 
-<?php include ("inc/head.php") ?>
+<?php include ("header.php") ?>
 
 <!-- Begin Template: page.php  -->
 
-	<?php include ("inc/body.header.php") ?>
-
 	<div class="menu main">
-		<?php wp_nav_menu( array( 'theme_location' => "Main" ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
 	</div>  <!-- END .menu main -->
 
 	<div id="content">
@@ -27,6 +25,6 @@
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #content -->
 
-	<?php include("inc/body.footer.php") ?>
-
 <!-- End Template: page.php  -->
+
+<?php include ("footer.php") ?>

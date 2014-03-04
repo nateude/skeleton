@@ -6,17 +6,9 @@
  */
 ?>
 
-<?php include ("inc/head.php") ?>
+<?php include ("header.php") ?>
 
 <!-- Begin Template: single.php  -->
-
-	<?php include ("inc/body.header.php") ?>
-
-	<div class="menu main">
-		<div class="wrapper">
-			<?php wp_nav_menu( array( 'theme_location' => "Main" ) ); ?>
-		</div>  <!-- END .wrapper -->
-	</div>  <!-- END .menu main -->
 
 	<div id="content">
 		<div class="wrapper">
@@ -36,6 +28,6 @@
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #content -->
 
-	<?php include("inc/body.footer.php") ?>
-
 <!-- End Template: single.php  -->
+
+<?php include ("footer.php") ?>

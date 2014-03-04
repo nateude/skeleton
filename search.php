@@ -7,19 +7,15 @@
 
 <!-- Begin Template: search.php  -->
 
-	<?php include ("inc/body.header.php") ?>
-
 	<div class="menu main">
-		<div class="wrapper">
-			<?php wp_nav_menu( array( 'theme_location' => "Main" ) ); ?>
-		</div>  <!-- END .wrapper -->
+		<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
 	</div>  <!-- END .menu main -->
 
 	<div id="content">
 		<div class="wrapper">
 			<div class="section twothird left">
 				<div class="section full text">
-					<?php include ("inc/layout.col-one.php") ?>
+					<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(__('')); endwhile; else: endif; ?>
 				</div>  <!-- END .section -->
 				<div class="section full widgets grid">
 					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Post Widgets') ) {} ?>
@@ -33,6 +29,6 @@
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #content -->
 
-	<?php include("inc/body.footer.php") ?>
-
 <!-- End Template: search.php  -->
+
+<?php include ("footer.php") ?>

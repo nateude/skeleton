@@ -1,0 +1,107 @@
+.small{display:block;}
+
+.top{
+	.mobile-bttn {
+		float: right;
+		width: 40px;
+		height: 40px;
+		background: url(../img/icons.png) no-repeat -35px 0;
+	}
+	.menu{
+		float: right;
+		width: auto;
+		margin: 4px 5px;
+	}
+}
+#header{
+	float:left;
+	width:100%;
+	margin:0 0 20px;
+
+	.logo {
+		width: 70%;
+		float: left;
+		margin: 15px 10%;
+	}
+	.title{
+		float: left;
+		margin: 35px 2% 10px;
+		width: 96%;
+		text-align: center;
+	}
+	.search {display:none;}
+	.social {display:none;}
+}
+
+.mainwrapper{
+	width:100%;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#content{
+	float:left;
+	width:100%;
+
+	.section {
+		float: left;
+		width: 100%;
+		margin: 20px 0;
+		padding: 0 0 20px;
+
+		&.left{margin:0;}
+		&.right{margin:0;}
+		&.half{width: 100%;}
+		&.onethird{width: 100%;}
+		&.twothird{width: 100%;}
+		&.onequater{width:100%}
+		&.threequater{width:100%}
+
+		&.border{border-bottom: 1px solid $graymd;}
+	}
+}
+
+.col{
+	width:100%;
+	float:left;
+	display:inline;
+
+	&.left{
+		margin:0;}
+	&.right{
+		margin:0;}
+}
+
+.posts{
+	&.grid{
+		.post{
+			float: left;
+			width: 100%;
+			margin: 0 0 20px;
+
+			img{width:100%; height:auto;}
+		}
+	}
+}
+
+.widgets{
+	&.grid{
+		.widget{
+			float: left;
+			width: 100%;
+			margin: 0 0 20px;
+		}
+	}
+
+	&.list{
+		.widget{
+			float: left;
+			width: 100%;
+			margin: 0 0 20px;
+			padding: 0 0 20px;
+			border-bottom:1px solid $graymd;
+
+			&:last-child{border-bottom:none;}
+		}
+	}
+}

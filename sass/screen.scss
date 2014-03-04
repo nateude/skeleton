@@ -2,14 +2,11 @@
 @import "compass/reset";
 @import "vars";
 
-@import "compass";
-@import "vars";
-
 // global defualts
 
 body{
 	font:$normal 13px/1.4em $sans;
-	background: url('../img/bg.png') repeat $gray;
+	background:$gray;
 	color:$graydk;
 
 }
@@ -62,14 +59,29 @@ h1 a, h1 a, h1 a, h1 a, h1 a, h1 a {color:$graydk;}
 	margin:0 5%;
 	position: relative;
 }
+.clear{
+	width:100%;
+	margin:0;
+	clear:left;
+}
+
 .large{display:none}
 .medium{display:none}
 .small{display:none}
 
-
 .left{ float:left; }
 .right{ float:right;}
 
+.col{
+	width:48%;
+	float:left;
+	display:inline;
+
+	&.left{
+		margin: 0 2% 0 0;}
+	&.right{
+		margin: 0 0 0 2%;}
+}
 .normal{font-weight:$normal;}
 strong{font-weight:$bold;}
 
@@ -125,38 +137,33 @@ ul {
 
 		&:hover{
 			color:$graydk;
-			background:$white;
+			background:$gray;
 		}
 	}
 }
+.search{
+	#s {
+		border: 2px solid $graymd;
+		background: $gray;
+		color: $graydk;
+		padding: 5px;
+		width: 180px;
+	}
+	#searchsubmit {
+		border: 1px solid $graymd;
+		background: $graymd;
+		color: $graydk;
+		padding: 6px;
 
-#header{
-	float:left;
-	width:100%;
-
-	.logo {
-		width: 10%;
-		float: left;
-		margin: 10px 0;
-	}
-	.title{
-		float: left;
-		margin: 35px 2% 0;
-	}
-	.search {
-		float: right;
-		margin: 10px 0 0;
-	}
-	.social {
-		float: right;
-		clear: right;
-		margin: 10px 0 0;
+		&:hover{
+			background: $graydk;
+			color: $graymd;
+		}
 	}
 }
 .social {
 	a{
-		float: left;
-		display: block;
+		display: inline-block;
 		background: url("../img/social_icons.png") no-repeat 0 0 transparent;
 		width: 40px;
 		height: 40px;
@@ -220,19 +227,22 @@ ul {
 }
 
 .menu.main{
-	background: $graymd;
+	background: $graydk;
+	li{
+		a{
+			display: block;
+			background: $graydk;
+			color:$white;
+			padding:15px 30px;
+			margin:0;
+			border-right:2px solid $white;
 
-	a{
-		display: block;
-		background: $graydk;
-		color:$white;
-		padding:15px 30px;
-		margin: 0 2px 0 0;
-
-		&:hover{
-			color:$graydk;
-			background:$white;
+			&:hover{
+				color:$graydk;
+				background:$gray;
+			}
 		}
+		&:last-child a{border-right:none;}
 	}
 }
 
@@ -240,12 +250,12 @@ ul {
 #content{
 	float:left;
 	width:100%;
+	padding:20px 0;
 
 	.section {
 		float: left;
 		width: 100%;
 		margin: 20px 0;
-		padding: 0 0 20px;
 
 		&.left{margin: 0 2% 0 0;}
 		&.right{margin: 0 0 0 2%;}
@@ -255,7 +265,10 @@ ul {
 		&.onequater{width:23%}
 		&.threequater{width:73%}
 
-		&.border{border-bottom: 1px solid $graymd;}
+		&.border{
+			border-bottom: 1px solid $graymd;
+			padding: 0 0 20px;
+		}
 	}
 }
 
@@ -305,12 +318,13 @@ ul {
 	width:100%;
 	background: $graydk;
 	color:$graymd;
+	padding:0 0 20px;
 
 	a{color:$graymd;}
 	a:hover{color:$white;}
 
 	.menu.footer{
-		margin: 20px 0 20px;
+		margin: 20px 0 0;
 		border-bottom:1px solid $gray;
 		padding: 0 0 10px;
 		a{
@@ -322,4 +336,17 @@ ul {
 			}
 		}
 	}
+	.social {
+		float: right;
+		clear: right;
+		margin: 10px 0 0;
+	}
+	.copy{
+		float: left;
+		margin: 10px 0 0;
+	}
 }
+
+@media only screen and (min-width: 1024px){@import "large";}
+@media only screen and (max-width: 1023px) and (min-width: 768px){@import "medium";}
+@media only screen and (max-width: 767px){@import "small";}

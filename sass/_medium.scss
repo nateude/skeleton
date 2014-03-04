@@ -1,0 +1,90 @@
+.medium{display:block;}
+
+#header{
+	float:left;
+	width:100%;
+	margin:0 0 20px;
+
+	.logo {
+		width: 10%;
+		float: left;
+		margin: 10px 0;
+	}
+	.title{
+		float: left;
+		margin: 35px 2% 0;
+	}
+	.search {display:none;}
+	.social {display:none;}
+}
+
+
+.mainwrapper{
+	width:100%;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+
+#content{
+	float:left;
+	width:100%;
+
+	.section {
+		float: left;
+		width: 100%;
+		margin: 20px 0;
+		padding: 0 0 20px;
+
+		&.left{margin: 0 2% 0 0;}
+		&.right{margin: 0 0 0 2%;}
+		&.half{width: 48%;}
+		&.onethird{width: 31%;}
+		&.twothird{width: 64%;}
+		&.onequater{width:48%}
+		&.threequater{width:96%}
+
+		&.border{border-bottom: 1px solid $graymd;}
+	}
+}
+
+.posts{
+	&.grid{
+		.post{
+			float: left;
+			width: 48%;
+			margin: 0 1% 20px;
+
+			&:nth-child(5n+0){
+				clear: left;
+			}
+
+			img{width:100%; height:auto;}
+		}
+	}
+}
+
+.widgets{
+	&.grid{
+		.widget{
+			float: left;
+			width: 30%;
+			margin: 0 1.5% 20px;
+
+			&:nth-child(4n+0){
+				clear: left;
+			}
+		}
+	}
+	&.list{
+		.widget{
+			float: left;
+			width: 100%;
+			margin: 0 0 20px;
+			padding: 0 0 20px;
+			border-bottom:1px solid $graymd;
+
+			&:last-child{border-bottom:none;}
+		}
+	}
+}
