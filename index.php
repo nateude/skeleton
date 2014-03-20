@@ -28,7 +28,7 @@
 					$i=1;
 					$cat = get_post_meta(get_the_ID(), 'categories', true);
 					$posts = get_option('posts_per_page');
-					$my_query = new WP_Query('cat='.$cat.'-2&posts_per_page='.$posts);
+					$my_query = new WP_Query('cat='.$cat.'&posts_per_page='.$posts);
 					if (have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
 				?>
 
