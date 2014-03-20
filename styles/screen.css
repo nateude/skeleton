@@ -80,7 +80,7 @@ ul li { margin: 0 0 15px; }
 .search #searchsubmit { border: 1px solid #e3e3e3; background: #e3e3e3; color: #4d4d4d; padding: 6px; }
 .search #searchsubmit:hover { background: #4d4d4d; color: #e3e3e3; }
 
-.social a { display: inline-block; background: url("../img/social_icons.png") no-repeat 0 0 transparent; width: 40px; height: 40px; margin: 5px 5px 5px 0; }
+.social a { display: inline-block; background: url("../img/social.png") no-repeat 0 0 transparent; width: 40px; height: 40px; margin: 5px 5px 5px 0; }
 .social a:last-child { margin: 5px 0; }
 .social a.facebook { background-position: 0px 0px; }
 .social a.facebook:hover { background-position: 0px -50px; }

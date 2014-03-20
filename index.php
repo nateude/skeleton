@@ -30,7 +30,6 @@
 					$posts = get_option('posts_per_page');
 					$my_query = new WP_Query('cat='.$cat.'-2&posts_per_page='.$posts);
 					if (have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-					if( !in_array($post->ID,  $do_not_duplicate ) ):
 				?>
 
 				<div class="post post<?=$i?>">
@@ -56,7 +55,6 @@
 
 				<?php
 					$i++;
-					endif;
 					endwhile;
 					endif;
 				?>
