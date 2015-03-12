@@ -31,7 +31,7 @@
 		    if ( $query->have_posts() ) { ?>
 		            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 						<div class="slide slide<?=$i?>">
-							<div class="image"><a href="<?=$permalink ?>" ><?php  the_post_thumbnail( $deviceType ); ?></a></div>
+							<div class="image"><a href="<?=$permalink ?>" ><?php  the_post_thumbnail('desktop'); ?></a></div>
 							<div class="content" >
 								<div class="wrapper">
 									<h3 class="title"><a href="<?php $permalink ?>" ><?php the_title(); ?></a></h3>

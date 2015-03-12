@@ -115,4 +115,16 @@ function col1( $content ){return str_replace('[begin]','<div class="col left">',
 function coltwo( $content ){return str_replace('[break]','</div><div class="col right">', $content );}	add_filter( "the_content", "coltwo", 2);
 function colend( $content ){return str_replace('[end]','</div><div class="clear"></div>', $content );}	add_filter( "the_content", "colend", 2);
 
+
+function iframe_shortcode( $atts ) {
+	$a = shortcode_atts( array(
+		'url' => false,
+		'height' => '350',
+		'width' => 'onethird'
+	), $atts );
+	return '<div class="iframe '.$a['width'].' right"><iframe src="'.$a['url'].'" width="100%" height="'.$a['height'].'"  frameborder="0" allowfullscreen style="border:0"></iframe></div>';
+}
+add_shortcode( 'iframe', 'iframe_shortcode' );
+
+
 ?>

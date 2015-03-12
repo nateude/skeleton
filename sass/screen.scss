@@ -113,7 +113,13 @@ ul {
 		}
 	}
 }
-
+.iframe{
+	float: left;
+	margin-right: 2%;
+	&.right{margin-right: 0; margin-left: 2%; float: right;}
+	&.half{width: 48%;}
+	&.onethird{width: 30%;}
+}
 //-----------------------------------------------
 // Main Layout Elements
 

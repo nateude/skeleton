@@ -17,8 +17,7 @@
 				<a class="rss" target="_blank" href="<?php echo get_option('home'); ?>/feed/" ></a>
 			</div>  <!-- END .social -->
 			<div class="copy">
-				<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, All Rights Reserved. | <a href="tel:1234567890">(123) 456.7890</a> | <a href="mailto:nateude@gmail.com">NateUde@gmail.com</a> <br>
-				Updated <?php the_modified_date('M Y'); ?> | Theme by <a href="http://nateude.com" target="_blank">Nate Ude Design</a> | <a href="<?php echo wp_login_url(); ?>" title="Login">Login</a></p>
+				<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>, All Rights Reserved. | <a href="tel:1234567890">(123) 456.7890</a> | <a href="mailto:email@email.com">email@email.com</a></p>
 			</div>  <!-- END .copy -->
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #footer -->

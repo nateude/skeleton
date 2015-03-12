@@ -2,7 +2,7 @@
 /**
  * @package WordPress
  * @subpackage nateude_skeleton
- * Template Name: Default Page
+ * Template Name:Full Page
  */
 ?>
 

@@ -13,7 +13,7 @@ q:before, q:after, blockquote:before, blockquote:after { content: ""; content: n
 
 a img { border: none; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 
 body { font: 400 13px/1.4em "Open Sans", sans-serif; background: #fbfbfc; color: #4d4d4d; }
 
@@ -25,17 +25,17 @@ p a:hover { text-decoration: underline; }
 
 li a:hover { text-decoration: underline; }
 
-h1 { font: 700 3em/1em "Italiana", serif; margin: 0 0 0; color: black; }
+h1 { font: 700 3em/1em "Italiana", serif; margin: 0 0 0; color: #000; }
 
 h2 { font: 700 1.5em/1.5em "Open Sans Condensed", sans-serif; margin: 0; color: #4d4d4d; text-transform: uppercase; }
 
-h3 { font: 700 1.4em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: black; }
+h3 { font: 700 1.4em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: #000; }
 
-h4 { font: 700 1.3em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: black; }
+h4 { font: 700 1.3em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: #000; }
 
-h5 { font: 700 1.2em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: black; }
+h5 { font: 700 1.2em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: #000; }
 
-h6 { font: 700 1em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: black; }
+h6 { font: 700 1em/1.5em "Open Sans Condensed", sans-serif; margin: 0 0 15px; color: #000; }
 
 h1 a, h1 a, h1 a, h1 a, h1 a, h1 a { color: #4d4d4d; }
 
@@ -70,10 +70,15 @@ ul li { margin: 0 0 15px; }
 .menu ul li a { display: block; padding: 5px 10px; }
 .menu ul li a:hover { text-decoration: none; }
 
-.mainwrapper { width: 90%; max-width: 1400px; margin: 0 auto; -webkit-box-shadow: #4d4d4d 0px 0px 10px; -moz-box-shadow: #4d4d4d 0px 0px 10px; box-shadow: #4d4d4d 0px 0px 10px; background: white; overflow: hidden; }
+.iframe { float: left; margin-right: 2%; }
+.iframe.right { margin-right: 0; margin-left: 2%; float: right; }
+.iframe.half { width: 48%; }
+.iframe.onethird { width: 30%; }
+
+.mainwrapper { width: 90%; max-width: 1400px; margin: 0 auto; -moz-box-shadow: #4d4d4d 0px 0px 10px; -webkit-box-shadow: #4d4d4d 0px 0px 10px; box-shadow: #4d4d4d 0px 0px 10px; background: #fff; overflow: hidden; }
 
 .menu.top { background: #4d4d4d; text-align: right; }
-.menu.top a { display: block; background: #4d4d4d; color: white; padding: 5px 10px; }
+.menu.top a { display: block; background: #4d4d4d; color: #fff; padding: 5px 10px; }
 .menu.top a:hover { color: #4d4d4d; background: #fbfbfc; }
 
 .search #s { border: 2px solid #e3e3e3; background: #fbfbfc; color: #4d4d4d; padding: 5px; width: 180px; }
@@ -104,13 +109,13 @@ ul li { margin: 0 0 15px; }
 #mainvisual { float: left; width: 100%; background: #fbfbfc; min-height: 250px; margin: 0; position: relative; overflow: hidden; }
 #mainvisual .slide { width: 100%; position: relative; overflow: hidden; }
 #mainvisual .slide img { float: left; }
-#mainvisual .content { width: 520px; border-top: 2px solid white; }
-#mainvisual .content .title a { color: white; font-size: 1.5em; }
-#mainvisual .content .text { color: white; font-size: 1em; }
-#mainvisual .content .text a { color: white; }
+#mainvisual .content { width: 520px; border-top: 2px solid #fff; }
+#mainvisual .content .title a { color: #fff; font-size: 1.5em; }
+#mainvisual .content .text { color: #fff; font-size: 1em; }
+#mainvisual .content .text a { color: #fff; }
 
 .menu.main { background: #4d4d4d; }
-.menu.main li a { display: block; background: #4d4d4d; color: white; padding: 15px 30px; margin: 0; border-right: 2px solid white; }
+.menu.main li a { display: block; background: #4d4d4d; color: #fff; padding: 15px 30px; margin: 0; border-right: 2px solid #fff; }
 .menu.main li a:hover { color: #4d4d4d; background: #fbfbfc; }
 .menu.main li:last-child a { border-right: none; }
 
@@ -136,9 +141,9 @@ ul li { margin: 0 0 15px; }
 
 #footer { float: left; width: 100%; background: #4d4d4d; color: #e3e3e3; padding: 0 0 20px; }
 #footer a { color: #e3e3e3; }
-#footer a:hover { color: white; }
+#footer a:hover { color: #fff; }
 #footer .menu.footer { margin: 20px 0 0; border-bottom: 1px solid #fbfbfc; padding: 0 0 10px; }
-#footer .menu.footer a { color: white; padding: 5px 10px 5px 0; }
+#footer .menu.footer a { color: #fff; padding: 5px 10px 5px 0; }
 #footer .menu.footer a:hover { color: #e3e3e3; }
 #footer .social { float: right; clear: right; margin: 10px 0 0; }
 #footer .copy { float: left; margin: 10px 0 0; }
