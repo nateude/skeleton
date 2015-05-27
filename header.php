@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" href="<?php echo get_bloginfo('template_url'); ?>/favicon.ico">
 
 	<!-- Include Global & Font Sheets for All devices  -->
-	<link href='http://fonts.googleapis.com/css?family=Italiana|Open+Sans:400italic,400,300,700|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="<?php echo get_bloginfo('template_url'); ?>/styles/screen.css" />
 	<!--[if lt IE 9]> <link rel="stylesheet" type="text/css" href="stylesheets/ie.css" /> <![endif]-->
 
@@ -19,11 +19,13 @@
 <body>
 <div class="mainwrapper">
 
-	<div class="menu top">
+	<div class="masthead">
 		<div class="wrapper">
-			<?php wp_nav_menu( array( 'theme_location' => "top-menu" ) ); ?>
+			<div class="widgets">
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Top Widgets') ) {} ?>
+			</div>  <!-- END .widget menu top -->
 		</div>  <!-- END .wrapper -->
-	</div>  <!-- END .menu top -->
+	</div> <!-- END Wrapper -->
 
 	<div id="header">
 		<div class="wrapper">
@@ -36,19 +38,13 @@
 				</a>
 				<h2><?php bloginfo('description'); ?></h2>
 			</div>  <!-- END .title -->
-
-			<div class="search">
-				<?php get_search_form(); ?>
-			</div>  <!-- END .search -->
-
-			<div class="social">
-				<a class="linkedin" target="_blank" href="#" ></a>
-				<a class="twitter" target="_blank" href="#" ></a>
-				<a class="facebook" target="_blank" href="#" ></a>
-				<a class="youtube" target="_blank" href="#" ></a>
-				<a class="rss" target="_blank" href="<?php echo get_option('home'); ?>/feed/" ></a>
-			</div>  <!-- END .social -->
 		</div> <!-- END .wrapper -->
 	</div>  <!-- END #header -->
 
 <!-- End Template: header.php  -->
+
+<div class="menu main">
+	<div class="wrapper">
+		<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
+	</div> <!-- END .wrapper -->
+</div>  <!-- END .menu main -->

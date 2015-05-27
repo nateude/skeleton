@@ -8,58 +8,37 @@
 if ( function_exists( 'add_theme_support' ) ) {	add_theme_support( 'post-thumbnails' ); }
 
 if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'thumb', 275, 162, true );
-	add_image_size( 'desktop', 1600, 600, true );
-	add_image_size( 'tablet', 1024, 384, true );
-	add_image_size( 'mobile', 460, 173, true ); //(cropped)
+  add_image_size( 'thumb', 275, 162, true );
+  add_image_size( 'logo', 300, 300, true );
+  add_image_size( 'fullwidth', 860, 640, true );
+  add_image_size( 'fullwidth-narrow', 860, 320, true );
+  add_image_size( 'banner', 1600, 1200, true );
+  add_image_size( 'banner-medium', 1024, 800, true );
+  add_image_size( 'banner-small', 600, 600, true );
 }
 
 //load scripts
 function siteScriptLoad(){
-	wp_register_script( 'cycle2', get_template_directory_uri().'/libs/jquery.cycle2.min.js', array( 'jquery'), null, true);
-	wp_register_script( 'cycle_carousel', get_template_directory_uri().'/libs/jquery.cycle2.carousel.min.js', array( 'cycle2'), null, true);
-	// wp_register_script( 'easing', get_template_directory_uri().'/libs/jquery.easing.1.3.js', array( 'cycle2'), null, true);
+  wp_register_script( 'cycle2', get_template_directory_uri().'/libs/jquery.cycle2.min.js', array( 'jquery'), null, true);
+  wp_register_script( 'cycle_carousel', get_template_directory_uri().'/libs/jquery.cycle2.carousel.min.js', array( 'cycle2'), null, true);
+  wp_register_script( 'waypoints', get_template_directory_uri().'/libs/waypoints.min.js', array( 'jquery'), null, true);
+  wp_register_script( 'countup', get_template_directory_uri().'/libs/jquery.counterup.min.js', array( 'waypoints'), null, true);
 
- 	wp_enqueue_script( 'cycle_carousel' );
- 	// wp_enqueue_script( 'easing' );
+  if(is_front_page()){
+    wp_enqueue_script( 'cycle_carousel' );
+    wp_enqueue_script( 'waypoints' );
+    wp_enqueue_script( 'countup' );
+  }else{
+    wp_enqueue_script( 'jquery' );
+  }
+  // wp_enqueue_script( 'easing' );
  }
 add_action('wp_enqueue_scripts', 'siteScriptLoad');
 
-// create custom banner post
-function banner_post() {
-    $labels = array(
-        'name' => __( 'Banners' ),
-        'singular_name' => __( 'Banner' ),
-        'add_new' => __( 'New Banner' ),
-        'add_new_item' => __( 'Add New Banner' ),
-        'edit_item' => __( 'Edit Banner' ),
-        'new_item' => __( 'New Banner' ),
-        'view_item' => __( 'View Banner' ),
-        'search_items' => __( 'Search Banners' ),
-        'not_found' =>  __( 'No Banners Found' ),
-        'not_found_in_trash' => __( 'No Banners found in Trash' ),
-    );
-    $args = array(
-        'labels' => $labels,
-        'has_archive' => false,
-        'public' => true,
-        'hierarchical' => false,
-        'exclude_from_search'  => false,
-        'supports' => array(
-            'title',
-            'excerpt',
-            'custom-fields',
-            'thumbnail',
-        )
-    );
-    register_post_type( 'banner', $args );
-}
-add_action( 'init', 'banner_post' );
 
 function register_my_menus() {
   register_nav_menus(
     array(
-      'top-menu' => __( 'Top' ),
       'main-menu' => __( 'Main' ),
       'footer-menu' => __( 'Footer' )
     )
@@ -67,64 +46,17 @@ function register_my_menus() {
 }
 add_action( 'init', 'register_my_menus' );
 
-if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Home Widgets',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
-		'after_widget' => '</div>', // Removes </li>
-		'before_title' => '<h3>', // Replaces <h2>
-		'after_title' => '</h3>', // Replaces </h2>
-));
-if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Page Widgets',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
-		'after_widget' => '</div>', // Removes </li>
-		'before_title' => '<h3>', // Replaces <h2>
-		'after_title' => '</h3>', // Replaces </h2>
-));
-if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Page Sidebar',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
-		'after_widget' => '</div>', // Removes </li>
-		'before_title' => '<h3>', // Replaces <h2>
-		'after_title' => '</h3>', // Replaces </h2>
-));
-if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Post Sidebar',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
-		'after_widget' => '</div>', // Removes </li>
-		'before_title' => '<h3>', // Replaces <h2>
-		'after_title' => '</h3>', // Replaces </h2>
-));
-if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Post Widgets',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
-		'after_widget' => '</div>', // Removes </li>
-		'before_title' => '<h3>', // Replaces <h2>
-		'after_title' => '</h3>', // Replaces </h2>
-));
-if ( function_exists('register_sidebar') )
-	register_sidebar(array('name'=>'Footer Sidebar',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">', // Removes <li>
-		'after_widget' => '</div>', // Removes </li>
-		'before_title' => '<h3>', // Replaces <h2>
-		'after_title' => '</h3>', // Replaces </h2>
-));
 
-//set special content tags
-function col1( $content ){return str_replace('[begin]','<div class="col left">', $content );}	add_filter( "the_content", "col1", 2);
-function coltwo( $content ){return str_replace('[break]','</div><div class="col right">', $content );}	add_filter( "the_content", "coltwo", 2);
-function colend( $content ){return str_replace('[end]','</div><div class="clear"></div>', $content );}	add_filter( "the_content", "colend", 2);
+//includes for functions files
+include 'functions/post_banners.php';
+include 'functions/post_resources.php';
+include 'functions/post_team.php';
+include 'functions/post_placements.php';
+include 'functions/post_press-releases.php';
+include 'functions/post_clients.php';
+include 'functions/post_testimonials.php';
+include 'functions/post_jobs.php';
 
-
-function iframe_shortcode( $atts ) {
-	$a = shortcode_atts( array(
-		'url' => false,
-		'height' => '350',
-		'width' => 'onethird'
-	), $atts );
-	return '<div class="iframe '.$a['width'].' right"><iframe src="'.$a['url'].'" width="100%" height="'.$a['height'].'"  frameborder="0" allowfullscreen style="border:0"></iframe></div>';
-}
-add_shortcode( 'iframe', 'iframe_shortcode' );
-
-
-?>
+include 'functions/widgets.php';
+include 'functions/categorynav.php';
+include 'functions/taxonomies.php';

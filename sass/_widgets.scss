@@ -1,0 +1,25 @@
+
+.widgets{
+	&.grid{
+		.widget{
+			float: left;
+			width: 30%;
+			margin: 0 1.5% 20px;
+
+			&:nth-child(4n+0){
+				clear: left;
+			}
+		}
+	}
+	&.list{
+		.widget{
+			float: left;
+			width: 100%;
+			margin: 0 0 20px;
+			padding: 0 0 20px;
+			border-bottom:1px solid $graymd;
+
+			&:last-child{border-bottom:none;}
+		}
+	}
+}

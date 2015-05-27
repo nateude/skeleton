@@ -1,0 +1,47 @@
+a{
+	@include single-transition(all, 0.1s, ease-in-out);
+	color:$graydk;
+	text-decoration:none;
+	&:hover{color:$black;}
+
+	&.button{
+		@include single-transition(all, 0.3s, ease-in-out);
+		font-weight: $bold;
+		color:$white;
+		background:$black;
+		border: 1px solid $black;
+		padding: 10px 30px;
+		margin: 15px 0 35px;
+		&:hover{
+			background:transparent;
+			color:$black;
+		}
+
+		&.two{
+			color:$white;
+			background:$graydk;
+			border: 1px solid $graydk;
+			&:hover{
+				background:transparent;
+				color:$graydk;
+			}
+
+		}
+		&.three{
+			color:$white;
+			background:$gray;
+			border: 1px solid $gray;
+			&:hover{
+				background:transparent;
+				color:$gray;
+			}
+
+		}
+
+		&.small{
+			padding: 5px 15px;
+			margin: 15px 0 35px;
+		}
+
+	}
+}

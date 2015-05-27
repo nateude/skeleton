@@ -12,10 +12,6 @@
 
 	<?php include("visual.slider.php") ?>
 
-	<div class="menu main large medium">
-		<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
-	</div>  <!-- END .menu main -->
-
 	<div id="content">
 		<div class="wrapper">
 			<?php if(!is_page('blog')) { ?>

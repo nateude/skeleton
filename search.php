@@ -7,10 +7,6 @@
 
 <!-- Begin Template: search.php  -->
 
-	<div class="menu main">
-		<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
-	</div>  <!-- END .menu main -->
-
 	<div id="content">
 		<div class="wrapper">
 			<div class="section twothird left">

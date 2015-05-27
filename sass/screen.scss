@@ -2,286 +2,64 @@
 @import "compass/reset";
 @import "vars";
 
-// global defualts
+@import "global";
+@import "buttons";
+@import "menu";
+@import "mainvisual";
 
-body{
-	font:$normal 13px/1.4em $sans;
-	background:$gray;
-	color:$graydk;
+@import "homepage";
+@import "subpage";
 
-}
-p{
-	margin: 0 0 15px;
-}
+@import "widgets";
+@import "posts";
 
-a{
-	text-decoration:none;
-}
-p a:hover{text-decoration:underline;}
-li a:hover{text-decoration:underline;}
 
-h1{
-	font: $bold 3em/1em $serif;
-	margin: 0 0 0;
-	color:$black;
-}
-h2{
-	font: $bold 1.5em/1.5em $sanscon;
-	margin: 0;
-	color:$graydk;
-	text-transform: uppercase;
-}
-h3{
-	font: $bold 1.4em/1.5em $sanscon;
-	margin: 0 0 15px;
-	color:$black;
-}
-h4{
-	font: $bold 1.3em/1.5em $sanscon;
-	margin: 0 0 15px;
-	color:$black;
-}
-h5{
-	font: $bold 1.2em/1.5em $sanscon;
-	margin: 0 0 15px;
-	color:$black;
-}
-h6{
-	font: $bold 1em/1.5em $sanscon;
-	margin: 0 0 15px;
-	color:$black;
-}
 
-h1 a, h1 a, h1 a, h1 a, h1 a, h1 a {color:$graydk;}
-
-.wrapper{
-	width:90%;
-	margin:0 5%;
-	position: relative;
-}
-.clear{
-	width:100%;
-	margin:0;
-	clear:left;
-}
-
-.large{display:none}
-.medium{display:none}
-.small{display:none}
-
-.left{ float:left; }
-.right{ float:right;}
-
-.col{
-	width:48%;
-	float:left;
-	display:inline;
-
-	&.left{
-		margin: 0 2% 0 0;}
-	&.right{
-		margin: 0 0 0 2%;}
-}
-.normal{font-weight:$normal;}
-strong{font-weight:$bold;}
-
-ul {
-	list-style-type: disc;
-	list-style: initial;
-	margin:0 0 35px 60px;;
-
-	li{margin:0 0 10px;}
-}
-ol {
-	list-style: decimal;
-	margin:0 0 35px 60px;;
-
-	li{margin:0 0 10px;}
-}
-i,em{font-style:italic;}
-b,strong{font-weight:$bold;}
-img{
-	max-width:100%;
-	height: auto;
-	&.alignleft{
-		float:left;
-		margin: 0 20px 20px 0;
-	}
-	&.alignright{
-		float: right;
-		margin: 0 0 20px 20px;
-	}
-	&.aligncenter{
-		float: left;
-		width: 100%;
-		margin: 0 0 20px;
-	}
-}
-.menu {
-	float:left;
-	width:100%;
-
-	ul{
-		list-style:none;
-		margin:0;
-		padding:0;
-
-		li{
-			display: inline-block;
-			margin: 0;
-			a{
-				display: block;
-				padding:5px 10px;
-			}
-			a:hover{text-decoration:none;}
-		}
-	}
-}
-
-.iframe{
-	float: left;
-	margin-right: 2%;
-	&.right{margin-right: 0; margin-left: 2%; float: right;}
-	&.half{width: 48%;}
-	&.onethird{width: 30%;}
-}
 //-----------------------------------------------
 // Main Layout Elements
 
 .mainwrapper{
-	width:90%;
-	max-width: 1400px;
+	width:100%;
 	margin:0 auto;
-	@include box-shadow($graydk 0px 0px 10px);
 	background:$white;
 	overflow:hidden;
 }
-.menu.top{
-	background: $graydk;
-	text-align: right;
-
-	a{
-		display: block;
-		background: $graydk;
-		color:$white;
-		padding:5px 10px;
-
-		&:hover{
-			color:$graydk;
-			background:$gray;
-		}
-	}
-}
-.search{
-	#s {
-		border: 2px solid $graymd;
-		background: $gray;
-		color: $graydk;
-		padding: 5px;
-		width: 180px;
-	}
-	#searchsubmit {
-		border: 1px solid $graymd;
-		background: $graymd;
-		color: $graydk;
-		padding: 6px;
-
-		&:hover{
-			background: $graydk;
-			color: $graymd;
-		}
-	}
-}
-.social {
-	a{
-		display: inline-block;
-		background: url("../img/social.png") no-repeat 0 0 transparent;
-		width: 40px;
-		height: 40px;
-		margin: 5px 5px 5px 0;
-
-		&:last-child{margin: 5px 0; }
-
-		&.facebook{background-position: 0px 0px;}
-		&.facebook:hover{background-position: 0px -50px;}
-		&.twitter{background-position: -50px 0px;}
-		&.twitter:hover{background-position: -50px -50px;}
-		&.pintrest{background-position: -100px 0px;}
-		&.pintrest:hover{background-position: -100px -50px;}
-		&.google{background-position: -150px 0px;}
-		&.google:hover{background-position: -150px -50px;}
-		&.myspace{background-position: -200px 0px;}
-		&.myspace:hover{background-position: -200px -50px;}
-		&.linkedin{background-position: -250px 0px;}
-		&.linkedin:hover{background-position: -250px -50px;}
-		&.instagram{background-position: -300px 0px;}
-		&.instagram:hover{background-position: -300px -50px;}
-		&.rss{background-position: -350px 0px;}
-		&.rss:hover{background-position: -350px -50px;}
-		&.youtube{background-position: -400px 0px;}
-		&.youtube:hover{background-position: -400px -50px;}
-	}
-}
-#mainvisual {
-	float: left;
-	width: 100%;
-	background: $gray;
-	min-height: 250px;
-	margin:0;
+.masthead{
+	background: $graylt;
+	padding: 10px 0;
+	float:left;
+	width:100%;
 	position: relative;
-	overflow:hidden;
+	z-index: 100;
 
-	.slide{
-		width: 100%;
-		position: relative;
-		overflow: hidden;
+	.widgets{
+		.widget{
+			float: right;
+			width: auto;
+			margin: 0 0 0 10px;
+			padding: 0;
 
-		img{float:left;}
-	}
-
-	.content {
-		width: 520px;
-		border-top:2px solid $white;
-
-		.title a{
-			color:$white;
-			font-size: 1.5em;
-		}
-		.text{
-			color:$white;
-			font-size: 1em;
-
-			a{color:$white;}
-		}
-	}
-
-}
-
-.menu.main{
-	background: $graydk;
-	li{
-		a{
-			display: block;
-			background: $graydk;
-			color:$white;
-			padding:15px 30px;
-			margin:0;
-			border-right:2px solid $white;
-
-			&:hover{
-				color:$graydk;
-				background:$gray;
+			a{
+				float:left;
 			}
 		}
-		&:last-child a{border-right:none;}
 	}
+
 }
-
-
+#header{
+	float:left;
+	width:100%;
+	padding:20px 0;
+	position: relative;
+	z-index: 100;
+	text-align: center;
+}
 #content{
 	float:left;
 	width:100%;
 	padding:20px 0;
+	position: relative;
+	z-index: 100;
 
 	.section {
 		float: left;
@@ -299,47 +77,6 @@ img{
 		&.border{
 			border-bottom: 1px solid $graymd;
 			padding: 0 0 20px;
-		}
-	}
-}
-
-.posts{
-	&.grid{
-		.post{
-			float: left;
-			width: 23%;
-			margin: 0 1% 20px;
-
-			&:nth-child(5n+0){
-				clear: left;
-			}
-
-			img{width:100%; height:auto;}
-		}
-	}
-}
-
-.widgets{
-	&.grid{
-		.widget{
-			float: left;
-			width: 30%;
-			margin: 0 1.5% 20px;
-
-			&:nth-child(4n+0){
-				clear: left;
-			}
-		}
-	}
-	&.list{
-		.widget{
-			float: left;
-			width: 100%;
-			margin: 0 0 20px;
-			padding: 0 0 20px;
-			border-bottom:1px solid $graymd;
-
-			&:last-child{border-bottom:none;}
 		}
 	}
 }
@@ -377,7 +114,3 @@ img{
 		margin: 10px 0 0;
 	}
 }
-
-@media only screen and (min-width: 1024px){@import "large";}
-@media only screen and (max-width: 1023px) and (min-width: 768px){@import "medium";}
-@media only screen and (max-width: 767px){@import "small";}
