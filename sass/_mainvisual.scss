@@ -12,6 +12,11 @@
 		position: relative;
 		z-index: 10;
 	}
+	.wrapper {
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+	}
 
 	.slide{
 		background-repeat: no-repeat;
@@ -26,32 +31,42 @@
 		width: 100%;
 		position: relative;
 		overflow: hidden;
+		text-align: left;
+
+		&.right{
+			text-align: right;
+		}
+		&.center{
+			text-align: center;
+		}
 	}
 
 	.content {
-		width: 520px;
-		height: 320px;
-		display: table-cell;
-		vertical-align: middle;
+		width: 100%;
+		height: auto;
+		display: block;
+		z-index: 50;
+		position: absolute;
+		margin: 30px 0;
+		top: 50%;
+		transform: translateY(-50%);
 
 		.title{
 			font-weight: $normal;
 			color:$white;
 			font-size: 2.5em;
-			line-height: 1.2em;
-			text-shadow: 1px 1px 1px $black;
+			line-height: 1.5em;
 
 			a{color:$white;}
 		}
-
-		.text{
+		.subtitle{
+			font-weight: $normal;
 			color:$white;
-			font-size: 1em;
-
-			a{color:$white;}
+			font-size: 2em;
+			line-height: 1.5em;
 		}
 		a.button {
-			float: left;
+			display: inline-block;
 			margin: 15px 0;
 		}
 	}

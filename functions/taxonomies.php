@@ -4,6 +4,35 @@
 // Add Custom Taxonomies
 // ------------------------------------------------------
 
+add_action( 'init', 'pagecat_taxonomy' );
+
+function pagecat_taxonomy() {
+
+	$labels = array(
+		'name'              => _x( 'Categories', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Categories' ),
+		'all_items'         => __( 'All Categories' ),
+		'parent_item'       => __( 'Parent Category' ),
+		'parent_item_colon' => __( 'Parent Category:' ),
+		'edit_item'         => __( 'Edit Category' ),
+		'update_item'       => __( 'Update Category' ),
+		'add_new_item'      => __( 'Add New Category' ),
+		'new_item_name'     => __( 'New Category Name' ),
+		'menu_name'         => __( 'Categories' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'page-categories' ),
+	);
+	register_taxonomy( 'page-categories', array('page'), $args );
+}
+
 add_action( 'init', 'industry_taxonomy' );
 
 function industry_taxonomy() {
@@ -28,9 +57,9 @@ function industry_taxonomy() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'industries' ),
+		'rewrite'           => array( 'slug' => 'page-industries' ),
 	);
-	register_taxonomy( 'industry', array( 'resource', 'clients', 'page' ), $args );
+	register_taxonomy( 'industry', array( 'resource','page'), $args );
 }
 
 
@@ -58,7 +87,7 @@ function resources_taxonomy() {
 		'show_ui'           => true,
 		'show_admin_column' => true,
 		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'resoures' ),
+		'rewrite'           => array( 'slug' => 'page-resoures' ),
 	);
 	register_taxonomy( 'resoures', array( 'resource'), $args );
 }

@@ -1,16 +1,93 @@
 
 .posts{
-	&.grid{
+	&.cards{
 		.post{
+			@include single-transition(all, 0.3s, ease-in-out);
 			float: left;
-			width: 23%;
+			width: 31.33%;
 			margin: 0 1% 20px;
+			background-color: #fff;
+			box-shadow: 0px 0px 0px 1px $graylt;
+			border-bottom: 2px solid $graylt;
 
-			&:nth-child(5n+0){
-				clear: left;
+			&:hover{
+				border-bottom: 2px solid $graydk;
 			}
 
 			img{width:100%; height:auto;}
+
+			.content {
+				width: 90%;
+				padding: 10px 5%;
+				height: 160px;
+
+				.title{
+					margin: 5px 0 10px;
+					font-size: 1.2em;
+					line-height: 1.3em;
+				}
+				p{color:$gray;}
+			}
+			.metadata {
+				font-size: .8em;
+				padding:0 0 5px;
+				color:$gray;
+				a{
+					color:$gray;
+					&:hover{color:$graydk;}
+				}
+			}
+		}
+
+		&.card_onethird{
+			.post{
+				width: 32%;
+				margin: 0 1% 20px;
+
+				&:nth-child(3n+1){
+					clear: left;
+					margin-left:0;
+				}
+
+				&:nth-child(3n+3){
+					margin-right:0;
+				}
+
+			}
+		}
+
+		&.card_onequarter{
+			.post{
+				width: 23%;
+				margin: 0 1% 20px;
+
+				&:nth-child(4n+1){
+					clear: left;
+					margin-left:0;
+				}
+
+				&:nth-child(4n+2){
+					margin-right:0;
+				}
+
+			}
+		}
+
+		&.card_half{
+			.post{
+				width: 49%;
+				margin: 0 1% 20px;
+
+				&:nth-child(2n+1){
+					clear: left;
+					margin-left:0;
+				}
+
+				&:nth-child(2n+2){
+					margin-right:0;
+				}
+
+			}
 		}
 	}
 }
