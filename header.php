@@ -2,49 +2,44 @@
 <html>
 <head>
 
+	<?php
+		// retrieve meta array for page
+		$meta = get_post_meta( get_the_ID() );
+	?>
+
 	<meta charset=utf-8>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
 	<link rel="shortcut icon" href="<?php echo get_bloginfo('template_url'); ?>/favicon.ico">
 
-	<!-- Include Global & Font Sheets for All devices  -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php echo get_bloginfo('template_url'); ?>/styles/screen.css" />
-	<!--[if lt IE 9]> <link rel="stylesheet" type="text/css" href="stylesheets/ie.css" /> <![endif]-->
-
     <?php wp_head(); ?>
 
+    <?php
+    	$template_name = basename(get_page_template());
+    	$template_name = substr($template_name, 0, -4);
+    ?>
+
 </head>
-<body>
+<body class="template_<?=$template_name ?>">
+
 <div class="mainwrapper">
 
 	<div class="masthead">
 		<div class="wrapper">
+
 			<div class="widgets">
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Top Widgets') ) {} ?>
+				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Masthead') ) {} ?>
 			</div>  <!-- END .widget menu top -->
 		</div>  <!-- END .wrapper -->
 	</div> <!-- END Wrapper -->
 
-	<div id="header">
+	<div class="menu main <?php if ( is_user_logged_in() ) { ?>logedin<?php } ?>">
 		<div class="wrapper">
-			<a href="<?php echo get_option('home'); ?>">
-				<img class="logo" src="<?php echo get_bloginfo('template_url'); ?>/img/logo.png" />
-			</a>
-			<div class="title">
-				<a href="<?php echo get_option('home'); ?>">
-					<h1><?php bloginfo('name'); ?></h1>
-				</a>
-				<h2><?php bloginfo('description'); ?></h2>
-			</div>  <!-- END .title -->
+			<div class="logo"><a href="<?php echo get_option('home'); ?>"><img src="<?php echo get_bloginfo('template_url'); ?>/img/nateude-design-logo.png" alt="Nate Ude Design Logo"></a></div>
+			<div class="menubttn mobilebutton">MENU</div>
+			<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
 		</div> <!-- END .wrapper -->
-	</div>  <!-- END #header -->
+	</div>  <!-- END .menu main -->
 
 <!-- End Template: header.php  -->
-
-<div class="menu main">
-	<div class="wrapper">
-		<?php wp_nav_menu( array( 'theme_location' => "main-menu" ) ); ?>
-	</div> <!-- END .wrapper -->
-</div>  <!-- END .menu main -->

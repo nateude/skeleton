@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage nateude_skeleton
+ * @subpackage skeleton
  * Template Name:Full Page
  */
 ?>
@@ -14,9 +14,6 @@
 		<div class="wrapper">
 			<div class="section full text">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(__('')); endwhile; else: endif; ?>
-			</div>  <!-- END .section -->
-			<div class="section full widgets grid">
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Page Widgets') ) {} ?>
 			</div>  <!-- END .section -->
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #content -->

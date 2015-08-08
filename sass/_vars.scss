@@ -3,19 +3,60 @@
 
 //colors
 
-$grayltr:#f7f8f8;
-$graylt:#d7d7d7;
-$gray:#808080;
-$graymd:#666464;
-$graydk:#4d4d4e;
+$grayltr:#e8e8e8;
+$yellow:#ffa500;
+$green:#6bc048;
+$greendk:#080;
+
+
+
+/* blues */
+
+$bluelt:#26afe5;
+$blue:#00a1e1;
+$bluedk:#008ece;
+$navy:#124666;
+
+$maroon:#606;
+
+/* oranges */
+
+$orangelt:#ffa139;
+$orange:#ff9016;
+$orangedk:#d98022;
+
+
+/* grays */
+
+
+$graylt: #f8f8f9;
+$graymd:#e8e8e8;
+$gray:#e8e8e8;
+$graydk:#c4c4c4;
+$body:#808080;
+
+$grayform:#cbcbcb;
 
 $white: #fff;
-$black: #000;
+
+$black:#3b4044;
+$blackdk:#35373a;
+
+// opacities
+
+$bshover:rgba(35, 31, 32, .5);
+
 
 //fonts
 
-$bold:700;
-$normal:400;
+$bolder:600;
+$normal:300;
 $light:200;
+$bold:400;
 
-$sans:'Open Sans', Arial sans-serif;
+$main:'proxima-nova', Arial, sans-serif;
+$title:'proxima-nova', Arial, sans-serif;
+
+
+
+

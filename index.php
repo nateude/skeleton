@@ -1,8 +1,8 @@
 <?php
 /**
  * @package WordPress
- * @subpackage nateude_skeleton
- * Template Name: Home Page
+ * @subpackage skeleton
+ * Template Name: Blog Home
  */
 ?>
 
@@ -11,53 +11,60 @@
 <!-- Begin Template: index.php  -->
 
 	<div id="content">
-			<?php if(!is_page('blog')) { ?>
-			<div class="section full text border">
-				<div class="wrapper">
-					<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(__('')); endwhile; else: endif; ?>
-				</div>  <!-- END .wrapper -->
-			</div>  <!-- END .section -->
-			<?php } ?>
-			<div class="section full posts cards graylt ">
-				<div class="wrapper">
-				<?php
-					$i=1;
-					$cat = get_post_meta(get_the_ID(), 'categories', true);
-					$posts = get_option('posts_per_page');
-					$my_query = new WP_Query('cat='.$cat.'&posts_per_page='.$posts);
-					if (have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-				?>
+		<div class="wrapper">
+			<div class="section twothird left">
+				<div class="section full text">
+					<h1 class="pagetitle">Our Blog: Ideosphere</h1>
+				</div>
+				<div class="section full posts list blog">
+					<?php if (have_posts()) : while (have_posts()) : the_post();
+							$perma = get_permalink($post->ID);
+					?>
 
-				<div class="post post<?=$i?>">
-					<div class="pageImageThumb" >
-						<a href="<?php the_permalink() ?>" rel="bookmark">
-							<?php
-								if ( has_post_thumbnail() ) {
-									the_post_thumbnail('thumb');
-							 	}else{ ?>
-							 		<img src="<?php bloginfo('template_url') ?>/img/thumb.png" class="attachment-thumb wp-post-image" alt="<?php bloginfo('name') ?>">
-							 	<?php	}
-							?>
-						</a>
-					</div>
-					<div class="content">
-						<div class="metadata"> <?php the_category(','); ?> / <?php the_author_posts_link(); ?> / <?php echo get_the_time('M Y'); ?></div>
-						<a href="<?php the_permalink() ?>" ><h2><?php the_title(); ?></h2></a>
-						<p><?php echo get_the_excerpt(); ?> <a class="readmore" href="<?php the_permalink() ?>">..read more &rsaquo; </a></p>
-					</div>
-				</div> <!--END post post<?=$i?> -->
+						<div class="post post<?=$i?>"><div class='feat'>
+								<?php if ( has_post_thumbnail() ) {
+									echo "<a href='".$perma."' >";
+									the_post_thumbnail('blog');
+									echo '</a>';
+								}?></div>
+							<div class="content">
+								<h2><a href="<?=$perma ?>" ><?php the_title(); ?></a></h2>
+								<div class="metadata"> <?php the_category(','); ?> <?php echo get_the_time('F j, Y'); ?> <?php the_author_posts_link(); ?></div>
+								<p><?php echo get_the_excerpt() ?></p>
+								<a class="readmore button orange" href="<?=$perma ?>" >Continue Reading</a>
+							</div>
+						</div> <!--END post post<?=$i?> -->
 
 				<?php
 					$i++;
 					endwhile;
 					endif;
 				?>
-				</div>  <!-- END .wrapper -->
-			</div>  <!-- END .section -->
-			<div class="section full widgets grid">
-				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Widgets') ) {} ?>
-			</div>  <!-- END .section -->
-
+				<?php 	global $wp_query;
+					$big = 999999999; // need an unlikely integer
+					$pagination = paginate_links( array(
+						'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+						'format' => '?paged=%#%',
+						'current' => max( 1, get_query_var('paged') ),
+						'total' => $wp_query->max_num_pages,
+						'type' => 'array'
+					) );
+					if($pagination){
+						echo "<div class='section full pagination'>";
+						foreach ($pagination as $page) {
+							echo $page;
+						}
+						echo "</div><!-- section full pagination -->";
+					}
+				?>
+				</div>  <!-- END .section full text -->
+			</div>  <!-- END .section twothird -->
+			<div class="section onethird right sidebar">
+				<div class="full widgets list">
+					<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) {} ?>
+				</div>  <!-- END .section -->
+			</div>  <!-- END .section onethird -->
+		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #content -->
 
 <!-- End Template: index.php  -->

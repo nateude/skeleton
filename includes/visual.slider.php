@@ -58,20 +58,21 @@
 					echo '<style>'.$largecss.'@media (max-width: 1024px) {'.$tabletcss.'}@media (max-width: 600px) {'.$mobilecss.'}</style>';
 				 ?>
 			<?php } wp_reset_postdata(); ?>
-	<div class="controls">
-		<div class="arrows cycle-prev"></div>  <!-- END .cycle cycle-prev -->
+
+	<div class="controls <?php if($i == 2){ echo "disbaled";}?>">
+		<div class="arrows cycle-prev"></div>   <!-- END .cycle cycle-prev -->
 		<div class="cycle-pager"></div>
-		<div class="arrows cycle-next"></div>  <!-- END .cycle cycle-next -->
+		<div class="arrows cycle-next"></div>   <!-- END .cycle cycle-next -->
 	</div>  <!-- END .controls -->
 
-	<div class="slideshow cycle-slideshow testimonial-slider"
+	<div class="slideshow cycle-slideshow main-slider"
 		data-cycle-fx="scrollHorz"
 		data-cycle-pause-on-hover="true"
 		data-cycle-speed="2000"
 		data-cycle-timeout="0"
 		data-cycle-slides="> div.slide"
-		data-cycle-prev=".cycle-prev"
-		data-cycle-next=".cycle-next"
+		data-cycle-prev=".controls .cycle-prev"
+		data-cycle-next=".controls .cycle-next"
 		data-cycle-log="false"
 		data-cycle-pager=".controls .cycle-pager"
 	>

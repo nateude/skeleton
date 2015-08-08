@@ -1,8 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage nateude_skeleton
- * Template Name: Post
+ * @subpackage skeleton
  */
 ?>
 
@@ -10,24 +9,28 @@
 
 <!-- Begin Template: single.php  -->
 
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5500cb4f5ae09ec3" async="async"></script>
+
 	<div id="content">
 		<div class="wrapper">
 			<div class="section twothird left">
 				<div class="section full text">
-					<?php if (have_posts()) : while (have_posts()) : the_post(); the_content(__('')); endwhile; else: endif; ?>
-				</div>  <!-- END .section -->
-				<div class="section full widgets grid">
-					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Post Widgets') ) {} ?>
-				</div>  <!-- END .section -->
+					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<?php if ( has_post_thumbnail() ) { echo "<div class='post_feat'>"; the_post_thumbnail('full'); echo '</div>'; }?>
+						<h1 class="pagetitle"><?php the_title(); ?></h1>
+						<?php the_content(__('')); ?>
+					<?php endwhile; else: endif; ?>
+				</div>  <!-- END .section full text -->
 			</div>  <!-- END .section twothird -->
-			<div class="section onethird right">
-				<div class="section full widgets list">
-					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Post Sidebar') ) {} ?>
+			<div class="section onethird right sidebar">
+				<div class="widgets list">
+					<?php include 'includes/single.sidebar.php'; ?>
 				</div>  <!-- END .section -->
 			</div>  <!-- END .section onethird -->
 		</div>  <!-- END .wrapper -->
 	</div>  <!-- END #content -->
 
-<!-- End Template: single.php  -->
+<!-- End Template: page.php  -->
 
 <?php include ("footer.php") ?>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage nateude_skeleton
+ * @subpackage skeleton
  * Template Name: Default Page
  */
 ?>
@@ -16,16 +16,14 @@
 				<div class="section full text">
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 						<h1 class="pagetitle"><?php the_title(); ?></h1>
+
 						<?php the_content(__('')); ?>
 					<?php endwhile; else: endif; ?>
 				</div>  <!-- END .section full text -->
-				<div class="section full widgets grid">
-					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Page Widgets') ) {} ?>
-				</div>  <!-- END .section -->
 			</div>  <!-- END .section twothird -->
-			<div class="section onethird right">
-				<div class="section full widgets list">
-					<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Page Sidebar') ) {} ?>
+			<div class="section onethird right sidebar">
+				<div class="full widgets list">
+					<?php include 'includes/page.sidebar.php'; ?>
 				</div>  <!-- END .section -->
 			</div>  <!-- END .section onethird -->
 		</div>  <!-- END .wrapper -->

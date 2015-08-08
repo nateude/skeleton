@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage nateude_skeleton
+ * @subpackage skeleton
  */
 ?>
 

@@ -72,10 +72,10 @@ function svg( $atts ) {
 }
 add_shortcode( 'svg', 'svg' );
 
-// [callout align="right" size="onethird" size="bluemd"]
+// [callout align="right" size="onethird" color="bluemd"]
 function callout( $atts ) {
 	$a = shortcode_atts( array(
-		'size' => 'onethrd',
+		'size' => 'onethird',
 		'align' => 'right',
 		'color' => ''
 	), $atts );
@@ -108,3 +108,5 @@ function wrap_shortcode( $atts ) {
 	return '<div class="pagewrap">';
 }
 add_shortcode( 'wrap', 'wrap_shortcode' );
+
+

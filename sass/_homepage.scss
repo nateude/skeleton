@@ -1,0 +1,330 @@
+.template_front-page {
+
+	h2{
+		&.sectiontitle{
+			font-weight:$normal;
+			text-transform:none;
+		}
+	}
+	.divider{
+		margin:90px auto;
+	}
+	#content{
+		.section{
+			padding:90px 0;
+			&.who{
+				.iconwrap{
+					float:left;
+					width:100%;
+					text-align:left;
+					.icon{
+						float:left;
+						width:30%;
+						margin:0 4% 40px 0;
+						a{
+							float:left;
+							width:30%;
+							margin:0 2% 0 0;
+							img{
+								background:$orange;
+								border-radius:50%;
+								@include single-transition(all, 0.25s, ease-in-out);
+								&:hover{
+									background:$blue;
+								}
+							}
+						}
+						.content{
+							float:left;
+							width:68%;
+							margin:0;
+							h3{
+								font:$normal 1.375em/1.25em $main;
+								margin:0 0 40px;
+							}
+							p{
+								font:$bold .8125em/1.75em $main;
+							}
+						}
+						&.icon-3{
+							margin-right:0;
+						}
+						&.blue{
+							a{
+								img{
+									background:$blue;
+									&:hover{
+										background:$orange;
+									}
+								}
+							}
+						}
+						@media(max-width:768px){
+							width:48%;
+							&.icon-2{
+								margin-right:0;
+							}
+						}
+
+						@media(max-width:520px){
+							width:100%;
+							margin-right:0;
+							a{
+								width:100%;
+								margin:0;
+								img{
+									display:block;
+									margin:0 auto;
+								}
+							}
+							.content{
+								width:100%;
+								h3{
+									text-align:center;
+									margin:20px 0;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.partners{
+				.partner_wrap{
+					float:left;
+					width:100%;
+					box-shadow:inset 1px 1px 0 0 $graydk;
+					.post{
+						float:left;
+						width:25%;
+						box-shadow:inset -1px -1px 0 0 $graydk;
+						.feat{
+							float:left;
+							width:100%;
+							margin:0;
+							img{
+								float:left;
+								width:100%;
+							}
+						}
+						@media(max-width:768px){
+							width:50%;
+						}
+
+						@media(max-width:520px){
+							width:100%;
+						}
+					}
+				}
+				.btnwrap{
+					float:left;
+					width:100%;
+					margin:90px 0 0 0;
+				}
+			}
+
+			&.resources{
+				.resource-slider{
+					float:left;
+					width:100%;
+					position:relative;
+					.post{
+						&.resources{
+							color:$white;
+							float:left;
+							width:40%;
+							padding:50px 5%;
+							font-weight:$normal;
+
+							h3{
+								font:$normal 1.25em/1.25em $main;
+								text-transform: uppercase;
+								position:relative;
+								margin:0 0 50px;
+								&::after{
+									position:absolute;
+									top:25px;
+									left:0;
+									margin:25px 0;
+									width:35px;
+									height:3px;
+									background:$white;
+									content:"";
+								}
+							}
+
+
+							p{
+								color:$white;
+								font-weight: $normal;
+								margin:0 0 40px;
+							}
+							a{
+								color:$white;
+								&:hover{
+									color:$orange;
+								}
+								&.readmore{
+									float: left;
+	  								text-transform: uppercase;
+	  								box-shadow: inset 0 0 0 2px;
+	  								padding: 5px 20px;
+	  								font-size: .9375em;
+	  								margin:20px 0;
+	  								@media(max-width:1024px){
+	  									margin:40px 0 0;
+	  								}
+								}
+							}
+
+							.info{
+								float:right;
+								span{
+									display: block;
+	  								text-align: right;
+	  								font:$normal .9375em/1.125em $main;
+	  								margin:0 0 10px;
+	  								&.name{
+	  									font-weight:$bolder;
+	  								}
+								}
+								@media(max-width:1024px){
+									float:left;
+									width:100%;
+									span{
+										text-align:left;
+									}
+								}
+							}
+							&:nth-child(odd){
+								background:$blue;
+								a{
+									&.readmore{
+										&:hover{
+											background:$white;
+											color:$blue;
+										}
+									}
+								}
+							}
+							&:nth-child(even){
+								background:$bluedk;
+								a{
+									&.readmore{
+										&:hover{
+											background:$white;
+											color:$bluedk;
+										}
+									}
+								}
+							}
+							@media(max-width:768px){
+								display:none;
+								&.post1{
+									display:block;
+									width:90%;
+								}
+							}
+						}
+					}
+					.arrows{
+						position:absolute;
+						bottom:-65px;
+						height:40px;
+						width:40px;
+						cursor:pointer;
+						&.cycle-prev{
+							background:url(/ideosity/wp-content/themes/ideosity/img/arrow-prev.png) 50% 50% no-repeat;
+							left:45%;
+							&:hover{
+								background:url(/ideosity/wp-content/themes/ideosity/img/arrow-prev-hover.png) 50% 50% no-repeat;
+							}
+						}
+						&.cycle-next{
+							background:url(/ideosity/wp-content/themes/ideosity/img/arrow-next.png) 50% 50% no-repeat;
+							right:45%;
+							&:hover{
+								background:url(/ideosity/wp-content/themes/ideosity/img/arrow-next-hover.png) 50% 50% no-repeat;
+							}
+						}
+						@media(max-width:768px){
+							display:none;
+						}
+					}
+				}
+			}
+
+			&.form{
+				padding:60px 0;
+				background:$black;
+				h2{
+					color:$white;
+				}
+				p{
+					color:$white;
+				}
+			}
+
+			&.leadership{
+				.divider{
+					margin:60px auto;
+				}
+				.bgwrap{
+					background: url(/ideosity/wp-content/themes/ideosity/img/divider.jpg) 50% 50% no-repeat $graylt;
+  					float: left;
+  					width: 100%;
+				}
+				h3{
+					&.sectiontitle{
+						font:$normal 1.375em/1.375em $main;
+						margin:0 0 50px;
+					}
+				}
+				.inthenews{
+					float:left;
+					width:44%;
+					margin:0 2% 0 0;
+				}
+				.hwrap{
+					display:none;
+				}
+				.blog{
+					float:right;
+					width:44%;
+					margin:0 0 0 2%;
+					.post{
+						float:left;
+						width:100%;
+						margin:0 0 20px;
+						h3{
+							a{
+								&:hover{
+									color:$orange;
+								}
+							}
+						}
+					}
+				}
+
+				@media(max-width:768px){
+					.bgwrap{
+						background:none;
+					}
+					.inthenews, .blog{
+						width:100%;
+						margin:0;
+					}
+
+					.hwrap{
+						display:block;
+						background:url(/ideosity/wp-content/themes/ideosity/img/divider-horizontal.jpg) 50% 50% no-repeat $graylt;
+						float: left;
+  						width: 100%;
+  						height: 89px;
+  						margin: 45px 0;
+					}
+				}
+			}
+		}
+	}
+}
