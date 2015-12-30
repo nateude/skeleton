@@ -1,0 +1,159 @@
+//-----------------------------------------------
+// Form Elements
+
+
+form{
+	.sp{
+		display: none;
+	}
+}
+.inputwrap{
+	width:100%;
+	float:left;
+}
+label{
+	font-size: .9em;
+	width:100%;
+	float:left;
+}
+select,input, textarea{
+	@include single-transition(all, 0.3s, ease-in-out);
+	font-family:$main;
+	background: $grayltr;
+	border: none;
+	color: $black;
+	border-radius:0;
+	box-sizing: content-box;
+	display: block;
+	float: left;
+	width: 90%;
+	padding:6px 2% 10px;
+	border-bottom: 2px solid $graylt;
+
+	&:focus{
+		outline:none;
+		border-bottom: 2px solid $red;
+	}
+}
+
+::-webkit-input-placeholder{
+	font-family:$main;
+	color: #959595;
+}
+ :-moz-placeholder {
+	font-family:$main;
+	color: #959595;
+}
+ ::-moz-placeholder {
+	font-family:$main;
+	color: #959595;
+}
+ :-ms-input-placeholder {
+	font-family:$main;
+	color: #959595;
+}
+
+textarea{
+	height:100px;
+	margin:0 0 30px;
+}
+select,input {
+	height: 20px;
+	// max-width: 320px;
+}
+input.button, input.submit, input[type="submit"] {
+	font-family:$main;
+	font-size: 1.1em;
+	@include single-transition(all, 0.3s, ease-in-out);
+	cursor: pointer;
+	background: $red;
+	color: $white;
+	width: auto;
+	padding:9px 15px 11px;
+	border-bottom: 1px solid $red;
+	&:hover{
+		background:$blue;
+		border-bottom: 1px solid $blue;
+	}
+}
+
+.fieldwrap{
+	float: left;
+	width: 100%;
+	margin: 0 0 10px;
+
+	label{
+		width: 32%;
+		margin: 0px 4% 0 0;
+	}
+	&.field_Radio label{
+		width: 94%;
+		margin: 0 6% 0 0;
+	}
+	input{
+		width: 60%;
+	}
+	input[type="radio"] {
+		width: auto;
+		clear: left;
+		margin: 2px 15px 0 30%;
+	}
+	textarea{
+		height:163px;
+		width: 60%;
+		margin: 0;
+	}
+	.form_hint_holder {
+		float: right;
+		width: 63%;
+		font-size: .7em;
+	}
+}
+form{
+
+	input.button, input.submit, input[type="submit"] {
+		width: auto;
+		background: transparent;
+		border: 1px solid $red;
+		color: $red;
+		float: left;
+		margin: 20px 0 0 36%;
+
+		&:hover{
+			color:$white;
+			background:$red;
+		}
+	}
+
+	.submit p{
+		width: 63%;
+		float: right;
+		margin: 20px 0 20px 35%;
+		font-size: .7em;
+		line-height: 1.3em;
+	}
+
+
+}
+.form_title {
+    float: right;
+    width: 80%;
+    margin: 40px 0 20px;
+
+    @media (max-width: 768px){
+    	width: 100%;
+    }
+}
+
+	.Error_Message {
+		width: 80%;
+		float: right;
+		color: $red;
+		line-height: 1.2em;
+		margin: 10px 0;
+		font-size: .9em;
+
+			@media (max-width: 768px){
+				width: 100%;
+			}
+	}
